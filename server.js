@@ -13,10 +13,10 @@ app.use(fileUpload());
 
 app.post("/getfile", (req, res) => {
   let xmlDataObj = parser.parseXmlString(req.files.file.data, {
-    noblanks: true,
-    noent: true,
-    nocdata: true,
-    net: false,
+    noblanks:true,
+    noent:true,
+    nocdata:true,
+    net:false,
   });
   let to = xmlDataObj.get("//to").text();
   let accountTo = xmlDataObj.get("//accountTo").text();
