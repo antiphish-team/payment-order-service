@@ -1,5 +1,4 @@
 'use strict';
-// flag:{823f05bc487a79ef8d48312b71911323}
 const express = require('express');
 const parser = require("libxmljs2");
 const fileUpload = require('express-fileupload');
