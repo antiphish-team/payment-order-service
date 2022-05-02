@@ -11,7 +11,7 @@ pipeline {
                         echo xml_parser
                         sh 'sed -i "s # libxmljs2 # ${xml_parser} # g" server.js'
                         sh 'sed -i "s # libxmljs2 # ${xml_parser} # g" package.json'
-                        sh 'sed -i "s # noent: true # noent: false # g" server.js' // hotfix
+                        sh 'sed -i "s # noent:\ true # noent:\ false # g" server.js' // hotfix
                         withCredentials([file(credentialsId: 'd22d3b5e-68c2-4519-8aa9-8d9db8ee178f', variable: 'flag')]) {
                             writeFile file: 'flag', text: readFile(flag)
                         }
